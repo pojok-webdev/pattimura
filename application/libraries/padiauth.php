@@ -41,8 +41,8 @@ class Padiauth{
 		}
 		return true;
 	}
-	public function log_in($username,$password){
-		$query = $this->CI->db->select('id, username, email, password, salt')->where('username',$username)->get('users');
+	public function log_in($email,$password){
+		$query = $this->CI->db->select('id, username, email, password, salt')->where('email',$email)->get('users');
 		if($query->num_rows()!==1){
 			return false;
 		}

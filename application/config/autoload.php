@@ -18,5 +18,4 @@
 		'App_logs/app_log',
 		'App_settings/app_setting',
 		'Users/user',
-		'Websettings/websetting'
 	));
