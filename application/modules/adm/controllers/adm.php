@@ -11,13 +11,14 @@ class Adm extends CI_Controller{
 		switch($params['sender']){
 			 case 'login':
 				if($this->padiauth->log_in($params['email'],$params['password'])){
-					echo "sukses";
-					//redirect(base_url() . 'admin/categories');
+					redirect(base_url() . 'adm/settings');
 				}else{
-					echo "tidak sukses";
-					//redirect(base_url() . 'admin/login/fail');
+					redirect(base_url() . 'adm/login/fail');
 				}
 			 break;
 		}
+	}
+	function settings(){
+		$this->load->view('backend/settings');
 	}
 }
