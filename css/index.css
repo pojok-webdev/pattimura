@@ -1,0 +1,195 @@
+
+@media (min-width: 960px){
+    .container-web {
+        width:1000px;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top:20px;
+    }
+}
+button, select, html, textarea, input {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+p, a, ul, li, input, select {font-size:14px;}
+
+p {line-height:20px;}
+
+.border-btm{
+    border-bottom: #EF6C00 solid 10px;
+}
+
+.event-date{
+    background-color: #EF6C00;
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+.event-date2{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.event-head{
+    color: grey;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.head-caption1{
+    color: #EF6C00;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.btn2{
+    border-radius: 0 40px 40px 0;
+    margin-left: 0px;
+}
+.btn3{
+    border-radius: 0 40px 40px 0;
+    margin-left: 0px;
+    float:right;
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4px;
+}
+.head-caption{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-bottom: #EF6C00 solid 10px;
+    box-shadow: rgba(0,0, 0, 0.2)2px 2px;
+	z-index:1;
+}
+.contact-1{
+    width: 90%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-bottom: #EF6C00 solid 10px;
+
+}
+.question{
+    font-size: 1.5em;
+    color: #EF6C00;
+    font-weight: bold;
+}
+md-input-container{
+    padding-bottom: 5px;
+}
+.menu-button1{
+    text-decoration: none;color: black
+}
+.membership-1{
+    position: absolute;
+    width: 15%;
+    top: 510px;
+
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-bottom: #EF6C00 solid 10px;
+}
+.md-button{
+    margin:0px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.marketplaceimg{
+    border-bottom: #EF6C00 solid 5px;
+}
+.marketplaceimg2{
+    width:30%;
+}
+
+/*added by reinhard */
+
+ul.myeo li {padding-bottom:10px}
+input { box-sizing: border-box; }
+input[type="text"], select {padding:5px;}
+
+input[type="button"] {background-color:rgb(239, 108, 0); padding:5px;border:none; text-transform:uppercase;color:#fff;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
+
+
+/* dropdown menu by reinhard */
+  .ddmenu ul {list-style: none;padding: 0px;margin: 0px;}
+  .ddmenu ul li {display: block;position: relative;float: left;}
+  .ddmenu li ul {display: none;}
+  .ddmenu ul li a {display: block; padding: 10px 10px;text-decoration: none; white-space: nowrap;color:#000; font-size:12px;position:relative;z-index:999;}
+  .ddmenu ul li.imglink a {display:block;text-align:center; padding:0px;text-decoration: none; white-space: nowrap;color:#000; font-size:12px;}
+  .ddmenu ul li a:hover {background-color: rgb(210, 210, 210);color:#000;}
+  .ddmenu ul li.imglink a:hover {background-color:#fff;color:#000;}
+  .ddmenu li:hover ul {display: block; position: absolute;}
+  .ddmenu li:hover li {float: none;}
+  .ddmenu li:hover li a {padding: 10px 10px;}
+  .ddmenu li:hover a {background-color: rgb(239, 108, 0);color:#fff}
+  .ddmenu li:hover li a:hover, .ddmenu ul li.active a:hover {background-color: rgb(210, 210, 210); color:#000;}
+  .active {background-color: rgb(239, 108, 0);box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
+  .ddmenu ul li.active a {color:#fff;}
+  .ddmenu ul li.login a, .ddmenu ul li.login a:hover {background-color:#000;color:#fff;}
+  #drop-nav li ul li {border-top: 0px;}
+  
+
+/* accordion menu by reinhard */ 
+#accordion {
+		list-style: none;
+		padding: 0 0 0 0;
+		width: 100%;
+	}
+	#accordion ul {
+		list-style: none;
+		padding: 0 0 0 0;
+	}
+	#accordion ul{
+		display: none;
+	}
+	#accordion ul li {
+		font-weight: normal;
+		cursor: auto;
+		background-color: #fff;
+		padding: 10px 15px;
+	}
+	#accordion li a {
+		display: block;
+		font-size:14px;
+		text-decoration:none;
+		cursor: pointer;
+		padding: 10px 15px;
+		list-style: circle;
+		color:#000;
+		/*border-bottom: 1px solid #CCCCCC;*/
+	}
+	#accordion ul li a {
+		color:#999999;
+		margin-left:10px;
+		text-decoration:none;
+		font-size:12px;
+		padding: 5px 10px;
+		border:none;
+	}
+	#accordion ul li:hover, #accordion li:hover {
+		background-color:rgb(210, 210, 210);
+	}
+	#accordion ul li:hover a {color:#000;}
+
+@media (max-width: 960px){
+    .marketplaceimg2{
+        width:90%;
+    }
+}
+@media (max-width: 767px){
+    
+	input[type="text"], input[type="button"], select {
+        width:100%;
+		margin-bottom:5px;
+    }
+}
+
+.bx-wrapper {border:none;}
+ul.bxslider, ol.bxslider {margin:0px}
