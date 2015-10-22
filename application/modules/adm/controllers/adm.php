@@ -21,4 +21,13 @@ class Adm extends CI_Controller{
 	function settings(){
 		$this->load->view('backend/settings');
 	}
+	function welcome(){
+		$this->load->view('backend/welcome');
+	}
+	function books(){
+		$this->load->view('backend/books');
+	}
+	function marketplaces(){
+		$this->load->view('backend/marketplaces');
+	}
 }
