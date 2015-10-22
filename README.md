@@ -1,3 +1,3 @@
-# patiunus
-a php/CI content management system
-pattimura 1.0, a PHP Content Management System
+# pattimura
+a PHP Content Management System
+by Webdev 2015
