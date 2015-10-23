@@ -6,6 +6,9 @@ class Adm extends CI_Controller{
 	function login(){
 		$this->load->view('backend/login');
 	}
+	function index(){
+		redirect(base_url().'adm/login');
+	}
 	function route(){
 		$params = $this->input->post();
 		switch($params['sender']){
@@ -28,6 +31,9 @@ class Adm extends CI_Controller{
 		$this->load->view('backend/books');
 	}
 	function marketplaces(){
-		$this->load->view('backend/marketplaces');
+		$objs = new Marketplace();
+		$objs->get();
+		$data = array('marketplaces'=>$objs);
+		$this->load->view('backend/marketplaces',$data);
 	}
 }

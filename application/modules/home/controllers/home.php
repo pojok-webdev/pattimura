@@ -5,10 +5,7 @@ class Home extends CI_Controller{
 		//$this->load->library('padiauth');
 	}
 	function index(){
-		$websetting = new Websetting();
-		$websetting->where("isdefault","1")->get();
 		$data = array(
-			'websetting'=>$websetting,
 			'page'=>'',
 		);
 		$this->load->view('header');

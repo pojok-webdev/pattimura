@@ -40,5 +40,6 @@
     });
 </script>
 <script src="<?php echo base_url();?>js/app.js"></script>
+<script src="<?php echo base_url();?>js/global.js"></script>
 <body ng-app="EoApp">
 <div class="container-web" ng-controller="AppCtrl">
