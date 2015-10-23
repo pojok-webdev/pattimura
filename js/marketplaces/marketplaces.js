@@ -122,6 +122,21 @@ $.fn.stairUp = function(options){
 				}
 			});
 		});
+		$('#tMarketPlace').on('click','.btnRemove',function(){
+			var tr = $(this).stairUp({level:2});
+			$('#tMarketPlace tbody tr').removeClass('selected');
+			tr.addClass('selected');
+			$.ajax({
+				url:thisdomain+'marketplaces/remove/'+tr.attr('trid'),
+				type:'get',
+				success:function(data){
+					tr.remove();
+				},
+				error:function(err){
+					console.log('error',err);
+				}
+			});
+		});
 		$('#btnSaveArea').click(function(){
 			switch($('#mdlInpTitle').html()){
 				case 'Edit Detail':

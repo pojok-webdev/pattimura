@@ -20,6 +20,13 @@ class Marketplaces extends CI_Controller{
 		$obj->where('id',$id)->get();
 		echo $obj->$fld;
 	}
+	function remove(){
+		$id = $this->uri->segment(3);
+		$obj = new Marketplace();
+		$obj->where('id',$id)->get();
+		$obj->delete();
+		echo $obj->check_last_query();
+	}
 	function save(){
 		$params = $this->input->post();
 		$obj = new Marketplace();
