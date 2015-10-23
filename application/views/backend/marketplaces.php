@@ -10,7 +10,7 @@
 		  fileReader.onloadend = function(){
 			  $("body").css("cursor","wait");
 				resizeImage2(fileReader.result,300,function(uri){
-					$("#imgLogo").attr("src",uri);
+					$(".imgLogo").attr("src",uri);
 					$("body").css("cursor","default");
 				});
 		  }
@@ -74,6 +74,9 @@
 												</button>
 												<button type="button" class="btn btn-default btnEditDetail">
 													<i class="fa fa-edit fa-fw"></i> Edit Detail
+												</button>
+												<button type="button" class="btn btn-default btnEditImage">
+													<i class="fa fa-edit fa-fw"></i> Edit Image
 												</button>
 												<button type="button" class="btn btn-default btnRemove">
 													<i class="fa fa-remove fa-fw"></i> Remove

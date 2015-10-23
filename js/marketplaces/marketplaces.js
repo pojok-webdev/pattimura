@@ -104,6 +104,24 @@ $.fn.stairUp = function(options){
 				}
 			});
 		});
+		$('#tMarketPlace').on('click','.btnEditImage',function(){
+			var tr = $(this).stairUp({level:2});
+			$('#tMarketPlace tbody tr').removeClass('selected');
+			tr.addClass('selected');
+			tinymce.activeEditor.getContent();
+			$.ajax({
+				url:thisdomain+'marketplaces/get/img/'+tr.attr('trid'),
+				type:'get',
+				success:function(data){
+					console.log('data',data);
+					$('#imgMarketPlace').attr('src',data);
+					$("#mdlImage").modal();
+				},
+				error:function(err){
+					console.log('error',err);
+				}
+			});
+		});
 		$('#btnSaveArea').click(function(){
 			switch($('#mdlInpTitle').html()){
 				case 'Edit Detail':
@@ -137,6 +155,16 @@ $.fn.stairUp = function(options){
 					});				
 				break;
 			}
+		});
+		$('#btnSaveImg').click(function(){
+			$.ajax({
+				url:thisdomain+'marketplaces/update',
+				data:{id:$('#tMarketPlace tbody tr.selected').attr('trid'),img:$('#imgMarketPlace').attr('src')},
+				type:'post',
+				success:function(){
+					$('#tMarketPlace tbody tr.selected td.mpimg img').attr('src',$('#imgMarketPlace').attr('src'));
+				}
+			});
 		});
 		$('.closeModal').click(function(){
 			$(this).stairUp({level:4}).modal('hide');
