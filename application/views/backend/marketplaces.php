@@ -60,14 +60,24 @@
                                     </thead>
                                     <tbody>
 										<?php foreach($marketplaces as $marketplace){?>
-                                        <tr class="odd gradeX">
-                                            <td><?php echo $marketplace->title;?></td>
-                                            <td><?php echo $marketplace->preview;?></td>
-                                            <td><?php echo $marketplace->detail;?></td>
-                                            <td class="center"><img src="<?php echo $marketplace->img;?>"></td>
+                                        <tr class="odd gradeX" trid="<?php echo $marketplace->id;?>">
+                                            <td class="mptitle"><?php echo $marketplace->title;?></td>
+                                            <td class="mppreview"><?php echo $marketplace->preview;?></td>
+                                            <td class="mpdetail"><?php echo $marketplace->detail;?></td>
+                                            <td class="center mpimg"><img src="<?php echo $marketplace->img;?>"></td>
                                             <td class="center">
-												<button type="button" class="btn btn-default btnEdit"><i class="fa fa-edit fa-fw"></i> Edit</button>
-												<button type="button" class="btn btn-default btnRemove"><i class="fa fa-remove fa-fw"></i> Remove</button>
+												<button type="button" class="btn btn-default btnEditTitle">
+													<i class="fa fa-edit fa-fw"></i> Edit Title
+												</button>
+												<button type="button" class="btn btn-default btnEditPreview">
+													<i class="fa fa-edit fa-fw"></i> Edit Preview
+												</button>
+												<button type="button" class="btn btn-default btnEditDetail">
+													<i class="fa fa-edit fa-fw"></i> Edit Detail
+												</button>
+												<button type="button" class="btn btn-default btnRemove">
+													<i class="fa fa-remove fa-fw"></i> Remove
+												</button>
 											</td>
                                         </tr>
                                         <?php }?>
@@ -89,72 +99,14 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/dist/js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/marketplaces/marketplaces.js">
 
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true
-        });
-        $("#btnAddMarketPlace").click(function(){
-			$("#mdlAddMarketPlace").modal();
-		});
-		tinymce.init({
-			selector: "textarea",
-			theme: "modern",
-			plugins: [
-				"advlist autolink lists link image charmap print preview hr anchor pagebreak",
-				"searchreplace wordcount visualblocks visualchars code fullscreen",
-				"insertdatetime media nonbreaking save table contextmenu directionality",
-				"emoticons template paste textcolor colorpicker textpattern imagetools"
-			],
-			toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-			toolbar2: "print preview media | forecolor backcolor emoticons",
-			image_advtab: true,
-			templates: [
-				{title: 'Test template 1', content: 'Test 1'},
-				{title: 'Test template 2', content: 'Test 2'}
-			]
-		});
-		$('#btnSaveMarketplace').click(function(){
-			$.ajax({
-				url:thisdomain+'marketplaces/save',
-				data:{
-					title:$('#txttitle').val(),
-					preview:$('#txtpreview').val(),
-					detail:$('#txtdetail').val(),
-					img:$('#imgLogo').attr('src')
-					},
-				type:'post',
-				success:function(data){
-					console.log('data',data);
-				},
-				error:function(err){
-					console.log('err',err);
-				}
-			});
-		});
-		$('#tMarketPlace').on('click','.btnEdit',function(){
-			$("#mdlAddMarketPlace").modal();
-		});
-		$('#tMarketPlace').dataTable();
-    });
     </script>
 
 </body>

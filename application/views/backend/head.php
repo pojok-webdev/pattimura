@@ -25,3 +25,4 @@
     <script type="text/javascript" src="<?php echo base_url();?>js/global.js"></script>
     <script src="<?php echo base_url();?>assets/bootstraps/wysiwyg/bootstrap-wysiwyg.js"></script>
     <script src="<?php echo base_url();?>js/padi.imagelibs.js"></script>
+    <script src="<?php echo base_url();?>js/padi.common.libs.js"></script>
