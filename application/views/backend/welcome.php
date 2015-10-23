@@ -61,6 +61,7 @@
     <script src="<?php echo base_url()?>js/sbadmin2/bower_components/metisMenu/dist/metisMenu.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url()?>js/sbadmin2/dist/js/sb-admin-2.js"></script>
+    <script src="<?php echo base_url()?>js/welcome/welcome.js"></script>
     <script type="text/javascript">
 		(function($){
 

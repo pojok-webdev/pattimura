@@ -19,4 +19,5 @@
 		'App_settings/app_setting',
 		'Marketplaces/marketplace',
 		'Users/user',
+		'Settings/setting',
 	));
