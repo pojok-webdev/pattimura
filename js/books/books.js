@@ -30,8 +30,8 @@ $(document).ready(function() {
 		actions+='<button type="button" class="btn btn-default btnEditPreview">';
 		actions+='	<i class="fa fa-edit fa-fw"></i> Edit Preview';
 		actions+='</button>';
-		actions+='<button type="button" class="btn btn-default btnEditDetail">';
-		actions+='	<i class="fa fa-edit fa-fw"></i> Edit Detail';
+		actions+='<button type="button" class="btn btn-default btnEditDescription">';
+		actions+='	<i class="fa fa-edit fa-fw"></i> Edit Description';
 		actions+='</button>';
 		actions+='<button type="button" class="btn btn-default btnEditImage">';
 		actions+='	<i class="fa fa-edit fa-fw"></i> Edit Image';
@@ -46,19 +46,19 @@ $(document).ready(function() {
 				authors:$('#txtauthor').val(),
 				category:$('#txtcategory').val(),
 				suggester:$('#txtsuggester').val(),
-				detail:$('#txtdetail').val(),
+				description:tinyMCE.get('txtdescription').getContent(),
 				img:$('#imgLogo').attr('src')
 				},
 			type:'post',
 			success:function(data){
-			newRow = tbooks.fnAddData([$('#txttitle').val(), $('#txtpreview').val(), $('#txtdetail').val(), '<img src='+$('#imgLogo').attr('src')+' />', actions]);
+			newRow = tbooks.fnAddData([$('#txttitle').val(), $('#txtauthor').val(), tinyMCE.get('txtdescription').getContent(), '<img src='+$('#imgLogo').attr('src')+' />', actions]);
 			var row = tbooks.fnGetNodes(newRow);
 			$(row).attr('trid', data);
 				var nTr = tbooks.fnSettings().aoData[newRow[0]].nTr;
 				var nTds = $('td', nTr);
 				nTds.eq(1).addClass('mptitle');
-				nTds.eq(1).addClass('mppreview');
-				nTds.eq(3).addClass('mpdetail');
+				nTds.eq(1).addClass('mpauthor');
+				nTds.eq(3).addClass('mpdescription');
 				nTds.eq(4).addClass('mpimg');
 				console.log('data',data);
 			},

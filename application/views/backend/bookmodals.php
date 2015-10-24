@@ -27,8 +27,8 @@
 									<input type="text" id="txtsuggester" class="form-control" />
 								</div>
 								<div class="form-group">
-									<label>Detail</label>
-									<textarea id="txtdetail" class="form-control"></textarea>
+									<label>Description</label>
+									<textarea id="txtdescription" class="form-control"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Cover</label>

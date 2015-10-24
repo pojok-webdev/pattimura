@@ -62,8 +62,8 @@
 										<?php foreach($books as $book){?>
                                         <tr class="odd gradeX" trid="<?php echo $book->id;?>">
                                             <td class="mptitle"><?php echo $book->title;?></td>
-                                            <td class="mppreview"><?php echo $book->preview;?></td>
-                                            <td class="mpdetail"><?php echo $book->detail;?></td>
+                                            <td class="mpauthor"><?php echo $book->author;?></td>
+                                            <td class="mpdescription"><?php echo $book->description;?></td>
                                             <td class="center mpimg"><img src="<?php echo $book->img;?>"></td>
                                             <td class="center">
 												<button type="button" class="btn btn-default btnEditTitle">
@@ -72,8 +72,8 @@
 												<button type="button" class="btn btn-default btnEditPreview">
 													<i class="fa fa-edit fa-fw"></i> Edit Preview
 												</button>
-												<button type="button" class="btn btn-default btnEditDetail">
-													<i class="fa fa-edit fa-fw"></i> Edit Detail
+												<button type="button" class="btn btn-default btnEditDescription">
+													<i class="fa fa-edit fa-fw"></i> Edit Description
 												</button>
 												<button type="button" class="btn btn-default btnEditImage">
 													<i class="fa fa-edit fa-fw"></i> Edit Image
