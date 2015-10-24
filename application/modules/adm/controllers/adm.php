@@ -28,9 +28,9 @@ class Adm extends CI_Controller{
 		$this->load->view('backend/welcome');
 	}
 	function books(){
-		$objs = new Marketplace();
+		$objs = new Book();
 		$objs->get();
-		$data = array('marketplaces'=>$objs);
+		$data = array('books'=>$objs);
 		$this->load->view('backend/books',$data);
 	}
 	function marketplaces(){

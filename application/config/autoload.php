@@ -17,6 +17,7 @@
 	$autoload['model'] = array(array(
 		'App_logs/app_log',
 		'App_settings/app_setting',
+		'Books/book',
 		'Marketplaces/marketplace',
 		'Users/user',
 		'Settings/setting',

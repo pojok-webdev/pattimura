@@ -19,7 +19,7 @@
 	</script>
 </head>
 <body>
-	<?php $this->load->view('backend/marketplacemodals');?>
+	<?php $this->load->view('backend/bookmodals');?>
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -34,7 +34,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Market Places</h1>
+                    <h1 class="page-header">Books</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -43,12 +43,12 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <button type="button" id="btnAddMarketPlace" class="btn btn-default"><i class="fa fa-plus fa-fw"></i> Add</button>
+                            <button type="button" id="btnAddBook" class="btn btn-default"><i class="fa fa-plus fa-fw"></i> Add</button>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
-                                <table class="table table-striped table-bordered table-hover" id="tMarketPlace">
+                                <table class="table table-striped table-bordered table-hover" id="tBook">
                                     <thead>
                                         <tr>
                                             <th>Title</th>
@@ -59,12 +59,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-										<?php foreach($marketplaces as $marketplace){?>
-                                        <tr class="odd gradeX" trid="<?php echo $marketplace->id;?>">
-                                            <td class="mptitle"><?php echo $marketplace->title;?></td>
-                                            <td class="mppreview"><?php echo $marketplace->preview;?></td>
-                                            <td class="mpdetail"><?php echo $marketplace->detail;?></td>
-                                            <td class="center mpimg"><img src="<?php echo $marketplace->img;?>"></td>
+										<?php foreach($books as $book){?>
+                                        <tr class="odd gradeX" trid="<?php echo $book->id;?>">
+                                            <td class="mptitle"><?php echo $book->title;?></td>
+                                            <td class="mppreview"><?php echo $book->preview;?></td>
+                                            <td class="mpdetail"><?php echo $book->detail;?></td>
+                                            <td class="center mpimg"><img src="<?php echo $book->img;?>"></td>
                                             <td class="center">
 												<button type="button" class="btn btn-default btnEditTitle">
 													<i class="fa fa-edit fa-fw"></i> Edit Title
@@ -108,9 +108,8 @@
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/dist/js/sb-admin-2.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>js/marketplaces/marketplaces.js">
-
-    </script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/padi.common.libs.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/books/books.js"></script>
 
 </body>
 
