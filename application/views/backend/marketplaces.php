@@ -108,9 +108,8 @@
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     <script src="<?php echo base_url();?>assets/startbootstrap-sb-admin-2-1.0.7/dist/js/sb-admin-2.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>js/marketplaces/marketplaces.js">
-
-    </script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/padi.common.libs.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/marketplaces/marketplaces.js"></script>
 
 </body>
 
