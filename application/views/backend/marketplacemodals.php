@@ -121,19 +121,19 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
-<div class="modal fade" id="mdlTemplate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="mdlConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				<h4 class="modal-title" id="myModalLabel">Removal Confirmation</h4>
 			</div>
 			<div class="modal-body">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Are you sure want to remove the data ?
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary closeModal">Save changes</button>
+				<button type="button" class="btn btn-default closeModal" data-dismiss="modal">No</button>
+				<button type="button" id="btnRemove" class="btn btn-primary closeModal">Yes</button>
 			</div>
 		</div>
 		<!-- /.modal-content -->

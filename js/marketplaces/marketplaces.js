@@ -34,6 +34,22 @@ $.fn.stairUp = function(options){
 			]
 		});
 		$('#btnSaveMarketplace').click(function(){
+			var actions = '';
+			actions+='<button type="button" class="btn btn-default btnEditTitle">';
+			actions+='	<i class="fa fa-edit fa-fw"></i> Edit Title';
+			actions+='</button>';
+			actions+='<button type="button" class="btn btn-default btnEditPreview">';
+			actions+='	<i class="fa fa-edit fa-fw"></i> Edit Preview';
+			actions+='</button>';
+			actions+='<button type="button" class="btn btn-default btnEditDetail">';
+			actions+='	<i class="fa fa-edit fa-fw"></i> Edit Detail';
+			actions+='</button>';
+			actions+='<button type="button" class="btn btn-default btnEditImage">';
+			actions+='	<i class="fa fa-edit fa-fw"></i> Edit Image';
+			actions+='			</button>';
+			actions+='<button type="button" class="btn btn-default btnRemove">';
+			actions+='<i class="fa fa-remove fa-fw"></i> Remove';
+			actions+='</button>';
 			$.ajax({
 				url:thisdomain+'marketplaces/save',
 				data:{
@@ -44,6 +60,15 @@ $.fn.stairUp = function(options){
 					},
 				type:'post',
 				success:function(data){
+				newRow = tmarketplaces.fnAddData([$('#txttitle').val(), $('#txtpreview').val(), $('#txtdetail').val(), '<img src='+$('#imgLogo').attr('src')+' />', actions]);
+				var row = tmarketplaces.fnGetNodes(newRow);
+				//$(row).attr('thisid', maxid + 1);
+                    var nTr = tmarketplaces.fnSettings().aoData[newRow[0]].nTr;
+                    var nTds = $('td', nTr);
+                    nTds.eq(1).addClass('mptitle');
+                    nTds.eq(1).addClass('mppreview');
+                    nTds.eq(3).addClass('mpdetail');
+                    nTds.eq(4).addClass('mpimg');
 					console.log('data',data);
 				},
 				error:function(err){
@@ -126,6 +151,10 @@ $.fn.stairUp = function(options){
 			var tr = $(this).stairUp({level:2});
 			$('#tMarketPlace tbody tr').removeClass('selected');
 			tr.addClass('selected');
+			$('#mdlConfirm').modal();
+		});
+		$('#btnRemove').click(function(){
+			var tr = $('#tMarketPlace tbody tr.selected');
 			$.ajax({
 				url:thisdomain+'marketplaces/remove/'+tr.attr('trid'),
 				type:'get',
@@ -136,6 +165,7 @@ $.fn.stairUp = function(options){
 					console.log('error',err);
 				}
 			});
+
 		});
 		$('#btnSaveArea').click(function(){
 			switch($('#mdlInpTitle').html()){
@@ -184,5 +214,5 @@ $.fn.stairUp = function(options){
 		$('.closeModal').click(function(){
 			$(this).stairUp({level:4}).modal('hide');
 		});
-		$('#tMarketPlace').dataTable();
+		var tmarketplaces = $('#tMarketPlace').dataTable();
     });
